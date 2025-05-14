@@ -1,5 +1,14 @@
 # Jenkins GitOps Docker Repository
 
+This project shows how to build a simple Python Flask app and automate its deployment using Jenkins, Docker, and ArgoCD with a GitOps approach. The Dockerfile containerizes the app, and the Jenkinsfile defines steps to build, push the image to Docker Hub, and update the Kubernetes manifest.
+
+A small fix was added to the Jenkinsfile to support Docker inside Jenkins by setting two environment variables. Jenkins connects to GitHub and Docker Hub using stored credentials, builds the image, and updates the deployment file in a GitOps repo.
+
+ArgoCD then watches that GitOps repo and applies the new deployment automatically in Kubernetes. You can expose the app via Minikube to test it.
+
+This setup shows a full CI/CD flow with modern DevOps tools.
+
+
 Welcome to the Jenkins GitOps Docker repository! This repository contains the Dockerfile, Jenkinsfile, and application code necessary for building and deploying a Flask application using Jenkins in a GitOps workflow.
 
 ## Overview
@@ -39,3 +48,28 @@ Contributions to this repository are welcome! If you have any suggestions, impro
 ## License
 
 This repository is licensed under the [MIT License](LICENSE).
+
+
+![Captura de pantalla 2025-05-13 231059](https://github.com/user-attachments/assets/f20bda59-9292-4565-b1c2-c5892262b0f1)
+
+![Captura de pantalla 2025-05-14 130622](https://github.com/user-attachments/assets/55e7cf87-03bf-4ec6-8707-92390afe8505)
+
+![Captura de pantalla 2025-05-14 150544](https://github.com/user-attachments/assets/d010844e-1640-4f38-9508-b88b5e6070b1)
+
+![Captura de pantalla 2025-05-14 152631](https://github.com/user-attachments/assets/d667c563-fc02-4024-bdcc-c93e85f08fce)
+
+![Captura de pantalla 2025-05-14 152648](https://github.com/user-attachments/assets/00b80962-42e1-4ca3-950c-0b515c5556a4)
+
+![Captura de pantalla 2025-05-14 152733](https://github.com/user-attachments/assets/6197e388-c42e-4fe1-a3e2-76b5a1bdd647)
+
+![Captura de pantalla 2025-05-14 155625](https://github.com/user-attachments/assets/df41cba8-7a5b-4de9-9da9-472ea5684036)
+
+![Captura de pantalla 2025-05-14 170713](https://github.com/user-attachments/assets/41f7e35e-aa60-41fc-be62-48c3f67640b7)
+
+![Captura de pantalla 2025-05-14 170736](https://github.com/user-attachments/assets/cd08912b-3869-4831-927a-8ee20eadbde8)
+
+## <b> Autora </b>
+
++ [Gloria Vanesa](https://github.com/Vanesa155 "Vanesa V.")
+
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
