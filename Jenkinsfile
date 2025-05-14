@@ -1,6 +1,11 @@
 node {
     def app
-
+    
+    environment {
+        DOCKER_HOST = 'unix:///var/run/docker.sock'
+        DOCKER_BUILDKIT = '0' // Optional: disable BuildKit if it's causing issues
+    }
+    
     stage('Clone repository') {
       
 
